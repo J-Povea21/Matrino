@@ -7,7 +7,10 @@ services:
   build: .
 
   environment:
-   - PORT=3000
+    - PORT=${PORT}
+
+  ports:
+    - "${PORT}:${PORT}"
 
   develop:
     watch:
